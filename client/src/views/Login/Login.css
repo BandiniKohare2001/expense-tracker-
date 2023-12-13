@@ -1,0 +1,14 @@
+.manage-height{
+    height: 350px;
+    width: 350px;
+    border: 2px solid black;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (max-width: 768px) {
+    .login-nav-div{
+        display: none;
+    }
+
+  }

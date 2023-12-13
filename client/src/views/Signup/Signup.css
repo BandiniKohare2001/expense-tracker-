@@ -1,0 +1,164 @@
+.signup-container {
+    display: flex;
+}
+
+.home-heading-signup {
+    background-color: #001f40;
+    height: 50px;
+    text-align: center;
+    width: 164.3vh;
+}
+
+.head-signup {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.form-container {
+    height: 450px;
+    width: 350px;
+    border: 2px solid black;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signup-heading {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input-signup {
+    display: block;
+    height: 32px;
+    width: 280px;
+    margin: 30px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.signup-btn {
+    font-size: 20px;
+    padding: 8px 30px;
+    background-color: #001f40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 1px auto;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        display: flex;
+      }
+      
+      .home-heading-signup {
+        background-color: #001f40;
+        height: 50px;
+        text-align: center;
+        width: 164.3vh;
+        position: relative;
+      }
+      
+      .head-signup {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      .form-container {
+        height: 450px;
+        width: 350px;
+        border: 2px solid black;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: relative;
+      }
+      
+      .signup-heading {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      .input-signup {
+        display: block;
+        height: 32px;
+        width: 280px;
+        margin: 30px 30px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      
+      .signup-btn {
+        font-size: 20px;
+        padding: 8px 30px;
+        background-color: #001f40;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        display: block;
+        margin: 1px auto;
+        cursor: pointer;
+      }
+      
+      /* Sidebar Styles */
+      .nav-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px; /* Adjust the width of the sidebar as needed */
+        background-color: #333; /* Sidebar background color */
+        color: white; /* Text color in the sidebar */
+        transform: translateX(-120%);
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      /* Open Sidebar */
+      .signup-container.sidebar-open .nav-div {
+        transform: translateX(0);
+      }
+      
+      /* Hide Sidebar Toggle Button on Mobile */
+      .tog-btn-signup {
+        display: none;
+      }
+      
+      @media (max-width: 768px) {
+        
+      
+        /* Show Sidebar Toggle Button on Mobile */
+        .tog-btn-signup {
+          display: inline-block;
+          cursor: pointer;
+          font-size: 1.5rem;
+          padding: 10px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      
+        .signup-container.sidebar-open .tog-btn-signup {
+          display: none;
+        }
+      }
+      
+    .home-heading-signup{
+        width: 375px;
+    }
+    .form-container{
+        width: 330px;
+    }
+    .tog-btn-closes{
+        position: absolute;
+        top: 0px;
+        right: -50px;
+        font-size: 20px;
+    }
+
+}
