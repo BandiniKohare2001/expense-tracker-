@@ -24,7 +24,7 @@ export default function Transactions() {
     }
 
     const loadTransactions = async () => {
-        const response = await axios.get("/api/transaction");
+        const response = await axios.get("/api/transactions");
         const transactionsData = response?.data?.data;
 
         let totalCredit = 0;
@@ -51,7 +51,7 @@ setBalance(totalCredit-totalDebit)
     }, []);
 
     const deleteUserTransaction = async(id)=>{
-        const response = await axios.delete(`/api/transaction/${id}`);
+        const response = await axios.delete(`/api/transactions/${id}`);
     
         if(response?.data?.success){
           showToast(response?.data?.message,'denger','3000');

@@ -26,19 +26,19 @@ connectDB();
 
 
 
-app.post('/api/transaction', postApiTransaction)
+app.post('/api/transactions', postApiTransaction)
 
-app.get('/api/transaction', getAllTransactions );
+app.get('/api/transactions', getAllTransactions );
 
 app.post('/api/signup', postuserdata);
 
 app.post('/api/login', userlogin);
 
-app.delete('/api/transaction/:id', deleteTransaction)
+app.delete('/api/transactions/:id', deleteTransaction)
 
-app.put('/api/transaction/:id', editTransation)
+app.put('/api/transactions/:id', editTransation)
 
-app.get('/api/transaction/:id', displayedit)
+app.get('/api/transactions/:id', displayedit)
 
 
 const PORT = 5000;

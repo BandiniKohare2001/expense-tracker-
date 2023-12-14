@@ -13,7 +13,7 @@ const AddTransaction = () => {
         const userStorage = JSON.parse(localStorage.getItem('user'));
 
         try {
-            const response = await axios.post("/api/transaction", {
+            const response = await axios.post("/api/transactions", {
                 user: userStorage?._id,
                 amount: amount,
                 type: type,

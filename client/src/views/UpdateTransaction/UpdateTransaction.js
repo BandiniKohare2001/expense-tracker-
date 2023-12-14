@@ -15,7 +15,7 @@ function UpdateTransaction() {
   const { id } = useParams();
 
   const fetchTransaction = async () => {
-    const response = await axios.get(`/api/transaction/${id}`)
+    const response = await axios.get(`/api/transactions/${id}`)
     const { amount, type, description, category } = response.data.data;
 
     setAmount(amount)
@@ -28,7 +28,7 @@ function UpdateTransaction() {
   }, [])
 
   const UpdateTransaction = async () => {
-    const response = await axios.put(`/api/transaction/${id}`, {
+    const response = await axios.put(`/api/transactions/${id}`, {
       amount,
       type,
       description,
