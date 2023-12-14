@@ -51,7 +51,7 @@ setBalance(totalCredit-totalDebit)
     }, []);
 
     const deleteUserTransaction = async(id)=>{
-        const response = await axios.delete(`/api/deletetransaction/${id}`);
+        const response = await axios.delete(`/api/transaction/${id}`);
     
         if(response?.data?.success){
           showToast(response?.data?.message,'denger','3000');

@@ -34,11 +34,11 @@ app.post('/api/signup', postuserdata);
 
 app.post('/api/login', userlogin);
 
-app.delete('/api/deletetransaction/:id', deleteTransaction)
+app.delete('/api/transaction/:id', deleteTransaction)
 
-app.put('/api/edittransaction/:id', editTransation)
+app.put('/api/transaction/:id', editTransation)
 
-app.get('/api/gettransaction/:id', displayedit)
+app.get('/api/transaction/:id', displayedit)
 
 
 const PORT = 5000;

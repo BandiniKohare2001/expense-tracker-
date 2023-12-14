@@ -60,8 +60,9 @@
   font-size: 15px;
   padding: 2px;
   border-radius: 7px;
+  color: white;
   width: 60px;
-  padding: 5px;
+  padding-left: 5px;
   margin-left: 20px;
   background-color: rgb(78, 180, 248);
 }

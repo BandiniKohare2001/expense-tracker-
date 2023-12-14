@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className='header-img'>
-        {/* <img className='header-img' src='https://img.freepik.com/premium-photo/project-planning-software-modish-business-project-management_31965-41537.jpg?size=626&ext=jpg&ga=GA1.1.587441093.1698208905&semt=ais' /> */}
+      
         <div className='header-content'> <h1 className='header-heading'><span className='e'>E</span>xpences <span className='e'>T</span>racker</h1>
           <p className='header-para'>Expense Tracker help to maintain the record of daily expenses. The Expense Tracker app tracks all the expenses and helps the user to manage his/her expenses so that the user is the path of financial stability</p></div>
 
