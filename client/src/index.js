@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import Home from './views/Home/Home';
 import Signup from './views/Signup/Signup';
-import Dashboard from './views/Dashboard/Dashboard';
 import Login from './views/Login/Login';
+import Transactions from './views/Transactions/Transactions';
 
 const router = createBrowserRouter([
   {
@@ -17,13 +17,14 @@ const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "/dashboard",
-    element: <Dashboard />,
+    path: "/transactions",
+    element: <Transactions />
   },
   {
-    path : "/login",
-    element : <Login/>
-  }
+    path: "/login",
+    element: <Login />
+  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

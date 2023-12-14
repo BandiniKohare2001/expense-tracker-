@@ -1,18 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import "./Signup.css";
+import { Link } from 'react-router-dom';
+import axios from "axios";
 import Navbar from '../../components/Navbar/Navbar'
-import "./Signup.css"
-import { Link } from 'react-router-dom'
-import axios from "axios"
 function Signup() {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const handleToggleSidebar = () => {
-      setIsSidebarOpen(!isSidebarOpen);
-    };
+    
 
     const signup = async () => {
         const responce = await axios.post("/api/signup",
@@ -25,25 +22,19 @@ function Signup() {
 
         if (responce?.data?.success) {
             alert(responce?.data?.message)
-            window.location.href = "login";
+            window.location.href = "/login";
         } else {
             alert(responce?.data?.message)
         }
     }
 
     return (
-        <div className={`signup-container ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-            <div className='nav-div'> <Navbar />
-            <span className='tog-btn-closes' onClick={handleToggleSidebar}>❌</span></div>
-            <div>
-                <div className='home-heading-signup'><span className='head-signup'>
-                <span className='tog-btn-open' onClick={handleToggleSidebar}>
-              🟰
-            </span>
-                     Expence Tracker System </span></div>
-                <div>
-                    <form className='form-container'>
-                        <p className='text-center signup-heading'>Sign-Up</p>
+      
+                    
+                <div className='div'>
+                    <Navbar />
+                    <form className='signup-form'>
+                        <p className='signup-heading'>Sign-Up</p>
 
                         <input className='input-signup'
                             type='text'
@@ -78,8 +69,7 @@ function Signup() {
                         <p className='text-center'>Already have an account ? <Link to="/login">Login</Link></p>
                     </form>
                 </div>
-            </div>
-        </div>
+         
     )
 
 }

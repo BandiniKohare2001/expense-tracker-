@@ -1,0 +1,23 @@
+.transaction-history-table{
+    box-shadow: 0 0 10px 1px gray;
+    height: auto;
+   margin: 50px;
+}
+.transaction-row{
+    /* box-shadow: 0 0 1px 0.1px gray; */
+    border: 0.2px solid gray;
+    height: auto;
+    padding: 10px 20px;
+    position: relative;
+    
+}
+.credit-amount{
+    color: green;
+}
+.debit-amount{
+    color: red;
+}
+.transaction-category{
+    position: absolute;
+    right: 20px;
+}

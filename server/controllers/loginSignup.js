@@ -5,22 +5,22 @@ const postuserdata = async (req, res) => {
     try {
         const newUser = new userData({
             name,
-            number,
             email,
+            number,
             password
         })
 
         const saveUser = await newUser.save();
 
         res.json({
-            success: "true",
+            success: true,
             data: saveUser,
             message: "Signup successfully..!"
         }
         )
     } catch (e) {
         res.json({
-            success: "false",
+            success: false,
             message: e.message
         })
     }
@@ -28,22 +28,22 @@ const postuserdata = async (req, res) => {
 }
 
 
-const postuserlogin = async (req, res) => {
-    const { name, email, number, password } = req.body;
-    const findUser = await userData.findOne({ password, email }).select('name number email')
+const userlogin = async (req, res) => {
+    const { email, password } = req.body;
+    const findUser = await userData.findOne({ password, email });
 
     if (findUser == null) {
         return res.json({
-            success: "false",
-            message: "chal nikal yaha se..!"
+            success: false,
+            message: "User Not found !"
         }
         )
     }
     res.json({
-        success: "true",
+        success: true,
         data: findUser,
         message: "login successfully..!"
     }
     )
 }
-export {postuserdata,postuserlogin}
+export {postuserdata, userlogin}
