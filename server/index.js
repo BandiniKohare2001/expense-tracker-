@@ -34,7 +34,7 @@ app.post('/api/signup', postuserdata);
 
 app.post('/api/login', userlogin);
 
-app.delete('/api/transaction/:id', deleteTransaction)
+app.delete('/api/deletetransaction/:id', deleteTransaction)
 
 app.put('/api/edittransaction/:id', editTransation)
 

@@ -1,0 +1,22 @@
+.task-container-1 {
+   height: 40px;
+    /* color: white; */
+    border: none;
+    padding:  5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    /* background-color: #b6b6f9; */
+    background-color: rgb(74, 179, 249);
+    justify-content: space-evenly;
+   
+}
+
+
+.div-in{
+    width: 110px;
+    display: flex;
+    margin-top: 0%;
+    padding-top: 9px;
+    justify-content: flex-start;
+}

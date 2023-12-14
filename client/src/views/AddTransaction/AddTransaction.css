@@ -1,0 +1,19 @@
+.input-box-container{
+    height: auto;
+   border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    display: block;
+    margin-left: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.input-box{
+height: 25px;
+width: 300px;
+}
+select{
+    height: 30px;
+    width: 308px;  
+}

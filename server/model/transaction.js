@@ -1,7 +1,10 @@
 import { Schema , model } from "mongoose";
 
 const transactionSchema = new Schema ({
-  
+    user :{
+        type : Schema.Types.ObjectId,
+        ref : 'User',
+    },
     amount:{
         type: Number,
         required : true

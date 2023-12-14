@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-// import menu from "./menu.png"
 
 
 function Navbar() {
-  const [userdata, setUserdata] = useState({});
+  const [user, setUser] = useState({});
 
 
  
-  useEffect(() => {
-    const userFromlocalStorage = JSON.parse(localStorage.getItem('user') || '{}');
-    setUserdata(userFromlocalStorage);
-  }, [])
+  useEffect(()=>{
+    const userStorage = JSON.parse(localStorage.getItem('expenseuser') || '{}');
+    setUser(userStorage);
+},[])
 
   return (
     <div className='nav-container'>
@@ -21,20 +20,20 @@ function Navbar() {
       <div className='nav-links'>
 
         <Link to="/" className='nav-btn'>Home</Link>
-        <Link to="/transactions" className='nav-btn'>Transactions</Link>
         <Link to="/add-transaction" className='nav-btn'>Add Transaction</Link>
+        <Link to="/transactions" className='nav-btn'>Transactions</Link>
         <Link to="/signup" className='nav-btn'>Signup</Link>
         <Link to="/login" className='nav-btn'>Login</Link>
         
       </div>
 
       <div className='user'>
-        {userdata.name}
+       Hay!👩🏻‍💼{user.name} 
 
         {
-          userdata?.name? (<button className='btn-logout'
+          user?.name ? (<button className='btn-logout'
           onClick={()=>{
-            localStorage.removeItem("user");
+            localStorage.removeItem("expenseuser");
             window.location.href = "/login"
           }}
           >Logout</button>) : null
