@@ -131,7 +131,6 @@ setBalance(totalCredit-totalDebit)
                                         >✒️ Edit </p>
                                     </div>
                                        <div className="date"> <p className='edit-icon' onClick={() => { deleteUserTransaction(_id) }} >🗑️ Delete</p></div>
-                                    
                                 </div>
 
 
